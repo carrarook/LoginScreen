@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuário</title>
+    <link rel="stylesheet" href="/InterNexus/assets/css/main.css">
+</head>
+<body>
+    <div class="page">
+        <div class="formLogin">
+            <h1>Cadastro InterNexus </h1>
+            <form id="registrationForm">
+                <label for="fullName">Nome Completo:</label>
+                <input type="text" id="fullName" required>
+
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" required pattern="\d{11}" title="Digite um CPF válido com 11 dígitos">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+
+                <label for="dateOfBirth">Data de Nascimento:</label>
+                <input type="date" id="dateOfBirth" required>
+
+                <label for="nationality">Nacionalidade:</label>
+                <select id="nationality" required>
+                    <option value="">Selecione</option>
+                    <option value="Brasil">Brasil</option>
+                    <option value="Outro">Outro</option>
+                </select>
+
+                <div id="passportSection" style="display: none;">
+                    <label for="passportNumber">Número do Passaporte:</label>
+                    <input type="text" id="passportNumber">
+
+                    <label for="foreignNationality">Nacionalidade:</label>
+                    <input type="text" id="foreignNationality">
+                </div>
+
+                <label for="password">Senha:</label>
+                <input type="password" id="password" required>
+
+                <button type="submit" class="btn">Registrar</button>
+            </form>
+            <a id="loginButton" href="Index.html" class="btn">Ir para Login</a>
+        </div>
+    </div>
+
+    <script src="/InterNexus/assets/js/ScriptRegistro.js"></script>
+</body>
+</html>
